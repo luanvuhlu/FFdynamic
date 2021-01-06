@@ -11,6 +11,7 @@ using namespace http_util;
 using namespace app_common;
 using namespace ff_dynamic;
 using namespace ::google::protobuf;
+namespace pb = google::protobuf;
 
 //////////////////////////////////////////////////////////////////////////////////
 /* extend Error Description in DavMessager & AppMessager for Ial service */

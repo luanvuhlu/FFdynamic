@@ -89,7 +89,7 @@ public:
             m_timer = nullptr;
             return;
         }
-        m_timer = unique_ptr<asio::steady_timer>(new asio::steady_timer(m_socket->get_io_service()));
+        m_timer = unique_ptr<asio::steady_timer>(new asio::steady_timer(m_socket->get_executor()));
         m_timer->expires_from_now(std::chrono::seconds(seconds));
         auto self = this->shared_from_this();
         m_timer->async_wait([self](const error_code & ec) {
